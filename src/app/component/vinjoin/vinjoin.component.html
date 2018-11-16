@@ -1,0 +1,37 @@
+<br><br>
+<div class="root">
+  <h4>Vin-Join</h4>
+  <div class="example-container">
+    <mat-form-field>
+      <mat-label>Data</mat-label>
+      <textarea matInput placeholder="Vins" [(value)]="data" [(ngModel)]="data" (input)="submit()"></textarea>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Delim</mat-label>
+      <input matInput placeholder="', '" [(value)]="delimiter" [(ngModel)]="delimiter" (input)="submit()">
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+      <mat-select placeholder="Type" [(value)]="typeSelected" [(ngModel)]="typeSelected" (selectionChange)="submit()">
+        <mat-option value="1">Vin Only</mat-option>
+        <mat-option value="2">Number Only</mat-option>
+        <mat-option value="3">Any</mat-option>
+       </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-slide-toggle [(ngModel)]="unique" (toggleChange)="submit()">Unique? {{unique}}</mat-slide-toggle>
+
+  </div>
+
+  <br><br>
+  <mat-form-field>
+    <mat-label>Results</mat-label>
+    <textarea matInput placeholder="Vins" [(value)]="result" [(ngModel)]="result" #userinput></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="copyInputMessage(userinput)" value="click to copy">Copy</button>
+  <br>
+</div>
+

@@ -1,0 +1,34 @@
+<mat-sidenav-container class="all-wrap" fullscreen>
+  <mat-sidenav #sidenav>
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-list>
+      <mat-list-item [routerLink]="['/']">Vin-Join</mat-list-item>
+      <mat-list-item [routerLink]="['vinsearch']">Vin-Search</mat-list-item>
+      <mat-list-item [routerLink]="['vinscan']">Vin-Scan</mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <div class="page-wrap">
+    <header role="banner">
+      <mat-toolbar color="primary">
+        <button
+          type="button"
+          mat-icon-button
+          (click)="sidenav.open()"
+          title="Open sidenav">
+          <mat-icon>menu</mat-icon>
+        </button>
+        Utilities
+      </mat-toolbar>
+    </header>
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+    <mat-toolbar color="primary">
+      <footer>
+        © 2018 Copyright:
+        <a href="https://www.hansenadkins.com/">www.hansenadkins.com</a>
+      </footer>
+    </mat-toolbar>
+  </div>
+</mat-sidenav-container>

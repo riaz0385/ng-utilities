@@ -1,0 +1,8 @@
+.root {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+  border: 1px solid silver;
+  align-content: center;
+}
