@@ -22,6 +22,8 @@ import { VinsearchComponent } from './component/vinsearch/vinsearch.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ClipboardModule} from "ngx-clipboard";
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { PapaParseModule } from 'ngx-papaparse';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -49,6 +51,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatSelectModule,
     ClipboardModule,
     MatSlideToggleModule,
+    PapaParseModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

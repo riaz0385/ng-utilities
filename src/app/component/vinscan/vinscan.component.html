@@ -1,3 +1,23 @@
-<p>
-  vinscan works!
-</p>
+<div class="root">
+  <p>Upload only a .CSV file, header must be VIN and Bay (case sensitive) sample file would look like below</p>
+
+  <table border="1">
+    <tr>
+      <th>VIN</th>
+      <th>Bay</th>
+    </tr>
+    <tr>
+      <td>7JRA22TLXKG001234</td>
+      <td>E010</td>
+    </tr>
+    <tr>
+      <td>7JRA22TLXKG005678</td>
+      <td>R001</td>
+    </tr>
+  </table>
+  <br>
+  <input type="file" class="upload" (change)="changeListener($event.target.files)">
+  <div>
+    <p>Total Vins Updated={{bayUpdated}}</p>
+  </div>
+</div>

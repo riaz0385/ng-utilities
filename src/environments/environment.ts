@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false
+  ,baseUrl: 'http://hqcolo-k1:8880'
 };
 
 /*
